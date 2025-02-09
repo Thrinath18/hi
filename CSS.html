@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            background: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet)
+            /* background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet) */
+        /* } */ */
+        h1{
+            color: rgb(231, 68, 177);
+        }
+
+        ol{
+            color: blueviolet;
+        }
+
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #dummy, .a{
+            color: rgb(255, 21, 185);
+        }
+        /* deepak{
+            color: black;
+        } */
+        #c{
+            color: chocolate;
+        }
+        .b{
+            color: aqua;
+        }
+        #com{
+            color: blueviolet;
+        }
+        .grandparent .parent1{
+            color: rgb(136, 0, 255);
+        }
+        #parent2>div{
+            color: rgb(243, 147, 78);
+        }
+        a:visited{
+            color: rgb(98, 222, 222);
+        }
+        a:active{
+            color: rgb(29, 221, 29);
+        }
+        a:hover{
+            color: darkorchid;
+        }
+        input:focus{
+            color: rgb(238, 149, 76);
+        }
+        input{
+            padding-left: 30px;
+        }
+        a{
+            padding-right: 50px;
+        }
+        p:first-child{
+            color: rgb(37, 213, 25);
+        }
+        p:nth-child(3){
+            color: blue;
+        }
+        p:last-child{
+            color: rgb(234, 167, 80);
+        }
+        div p:nth-child(odd){
+            background: #f1dcf1;
+        }
+        div p:nth-child(even){
+            background-color: rgb(176, 244, 245);
+        }
+        #p1{
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        div p:not(p:nth-child(4)){
+            color: rgb(255, 0, 81);
+        }
+        #class6{
+            background: rgb(236, 228, 220);
+        }
+        div input:checked+p{
+            color: rgb(29, 115, 7);
+            padding-left: 400px;
+        }
+        .class6::first-letter{
+            font-size: 25px;
+            color: rgb(255, 21, 185);
+            padding-left: 300px;
+        }
+        .class6+p::first-line{
+            color: rgb(17, 214, 152);
+        }
+        .class6+p::before{
+            content: '💕';
+        }
+        .class6+p::after{
+            content: '😍';
+        }
+        .class{
+            background-color: rgb(252, 250, 240);
+        }
+    </style>
+</head>
+<body>
+   
+    <h1 id='heading1'>1st day of CSS</h1>
+    <h2 style="color: rgb(0, 98, 255);">Selectors</h3>
+    <p>
+        <h2>5 types of selectors</h2>
+        <ol>
+            <li> Simple Selector <br>
+            <li> Combinator Selector<br>
+            <li> Pseudo Class Selector<br>
+            <li> Pseudo Element Selector<br>
+            <li> Attribute Selector <br>
+        </ol>
+        <new>
+            <h4>Note: <d class="b" id="c">Priority of Simple selectors id > class > tagname > universal</d></h4>
+        </new>
+        <h1>2nd day of CSS</h1>
+        <h2>5 types of Simple Selectors</h2>
+            <ol type="a" style="color: rgb(150, 150, 49);">
+                <li>id<deepak id="dummy">(#)</deepak></li>
+                <li>class <deepak class="a">(.)</deepak></li>
+                <li>tag name <deepak class="a">(by names i.e, h1, h2, p, div..)</deepak></li>
+                <li>grouping <deepak id="dummy">(',' seperated by multiple selectors)</deepak></li>
+                <li>universal<deepak class="a">(*)</deepak></li>
+            </ol>
+        <h1>3rd day of CSS</h1>
+        <h2>4 types of Combinator Selectors</h2>
+            <ol type="a" style="color: rgb(150, 150, 49);">
+                <li>Descendent Selector<deepak id="com">( )</deepak></li>
+                    <ul>
+                        <li>We can use space( ) for this</li>
+                        <ex>Example :</ex><br>
+                        Here I took a tag with class grandparent and in it i took 2 parent class tags inside it i have written some data like boys and girls. Here when i use ".grandparent .parent1" only the the parent1 fields are affected. <br>
+                        <d class="grandparent">
+                            <d class="parent1">
+                                children of parent1 <br>
+                                <ul>
+                                    <li><child>Boy1</child></li><br>
+                                    <li><child>Boy2</child></li><br>
+                                    <li><child>Boy3</child></li><br>
+                                </ul>
+                            </d>
+                            <div id="parent2">
+                                children of parent2 <br>
+                                <dl><ul><li><p>child1 of parent2</p></li></ul></dl>
+                                    <dd><pre>is playing</pre></dd>
+                                <ul><li><p>child2 of parent2 </p></li></ul>
+                                    <pre>is dancing</pre>
+                            </div>
+                        </d>
+                    </ul>
+                <li>Direct Child Selector <deepak id="com">(>)</deepak></li>
+                <li>Adjacent Sibling Selector <deepak id="com">(+)</deepak></li>
+                <li>General Sibling Selector <deepak id="com">(~)</deepak></li>
+            </ol>
+        <h1>4th day of CSS</h1>
+        <h2>Pseudo Class Selectors</h2>
+            There are several states like active, visited, hover, focus(in input for forms), first-child etc..We can use colon(:) for it <br><br>
+            Example :
+                <pre>
+                    <code>
+                        &lt;style&gt;
+                                a:visited{
+                                    color: rgb(98, 222, 222);
+                                }
+                                a:active{
+                                    color: rgb(29, 221, 29);
+                                }
+                                a:hover{
+                                    color: darkorchid;
+                                }
+                                input:focus{
+                                    color: rgb(238, 149, 76);
+                                }
+                        &lt;/style&gt;
+                    </code>
+                </pre>
+                <a href="https://web.whatsapp.com/" target="_blank">Whatsapp</a>
+                <input type="text">
+            
+        <h1>5th day of CSS</h1>
+        <h2>Pseudo Class Selector (Continues...)</h2>
+        First child will get effected if we use p:first-child <br>
+        nth-child will get effected if we use p:nth-child(n) <br>
+        last child will get effected if we use p:last-child <br>
+        we can use odd and even for p:nth-child(odd/even)<br><br>
+        Example : <br>
+        <div id = p1>
+           <p>1st child</p>
+           <p>2nd child</p>
+           <p>3rd child</p>
+           <p>4th child</p>
+           <p>.</p>
+           <p>.</p>
+           <p>.</p>
+           <p>last child</p>
+        </div>
+        <h1>6th day of CSS</h1>
+        <h2>Pseudo Class Selector (Continues...)</h2>
+        Checked (we can use checked for check boxes...) <br>
+        <div id = "class6">
+            <input type="checkbox">
+            <p>color changes to green when i click the check box <br>
+                <pre>
+                    <code>
+                        Here i am using adjacent selector (+) <br>
+                        &lt; style &gt;
+                            input:checked+p{
+                                color: green;
+                            }
+                        &lt;/style &gt;
+                    </code>
+                </pre>
+            </p>
+        </div>
+        <h2>Pseudo Element Selector</h2>
+        <div class = "class">
+        We can use (::) operator to effect a particular element in a line or para without span <br>
+        <p class = "class6" style="background-color: rgb(252, 247, 237);">I am learning CSS</p>
+        <p style="background-color: rgb(255, 249, 240);">We can add anything with the help of before selector, i placed heart shape. <br>The first line will be in green color <br>and remaining will be normal. <br>Example : <br>
+            <pre>
+                <code>
+                    #class6{
+                        background: rgb(236, 228, 220);
+                    }
+                    div input:checked+p{
+                        color: rgb(29, 115, 7);
+                        padding-left: 400px;
+                    }
+                    .class6::first-letter{
+                        font-size: 25px;
+                        color: rgb(255, 21, 185);
+                        padding-left: 300px;
+                    }
+                    .class6+p::first-line{
+                        color: rgb(17, 214, 152);
+                    }
+                    .class6+p::before{
+                        content: '💕';
+                    }
+                    .class6+p::after{
+                        content: '😍';
+                    }
+                </code>
+            </pre>
+        </p>
+    </div>
+    </p>
+    <button><a href='#heading1'>but</a></button>
+</body>
+</html>
+
